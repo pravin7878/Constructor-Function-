@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1>
+        this is my bank account management system
+    </h1>
+</body>
+<script>
+    let bankAccounts = [];
+
+    function CreateBankAccount(accountNumber, name, type, balance) {
+
+        this.accountNumber = accountNumber
+        this.name = name
+        this.type = type
+        this.balance = balance
+
+        this.Accstatus = function(acs){
+            console.log(acs)
+        }
+
+        this.deposit = function deposit(amount) {
+            this.balance += amount
+            return `deposited success ₹+${amount}`
+           this.Accstatus == true
+        }
+
+        this.withdraw = function withdraw(amount) {
+            if (this.balance >= amount) {
+                this.balance -= amount
+                return `₹-${amount} is successfully withdraw`
+                this.Accstatus(true)
+            }
+            else if(this.balance < amount){
+                return `withdraw cancal ₹-${amount}`
+               alert('please dose not have your account sufficiant balence')
+            }
+
+        }
+
+        this.chackbalance = function chackbalance() {
+            console.log(`'your current balence is ₹${this.balance} `)
+        }
+
+    }
+    
+    let acc1 = new CreateBankAccount(56788, "deshraj", 'saving', 500)
+
+    let acc2 = new CreateBankAccount(75579755, "pravin", 'saving', 2000)
+
+    let acc3 = new CreateBankAccount(679657856, "babulal", 'saving', 3000,)
+
+    let acc4 = new CreateBankAccount(766889999, "ritesh", 'saving', 100,)
+
+    bankAccounts.push(acc1, acc2, acc3)
+
+    acc1.chackbalance()
+    
+    console.log(acc1.withdraw(500))
+    acc1.chackbalance()
+    console.log(acc1.deposit(10000));
+    acc1.chackbalance()
+    console.log(acc1.withdraw(650))
+    acc1.chackbalance()
+    console.log(acc1.withdraw(90000))
+    acc1.chackbalance()
+    // acc2.deposit(1000)
+    // acc2.withdraw(300)
+
+    // acc3.deposit(1000)
+    // acc3.withdraw(200)
+
+    // acc1.chackbalance()
+    // acc2.chackbalance()
+    // acc3.chackbalance()
+    // acc4.chackbalance()
+
+    function gettotelbalence(){
+        let totelbal = 0;
+     for(let i=0; i<bankAccounts.length; i++){
+        totelbal+=bankAccounts[i].balance
+     }
+     console.log(`totel balance = ${totelbal}`)
+    }
+    // gettotelbalence()
+</script>
+
+</html>
