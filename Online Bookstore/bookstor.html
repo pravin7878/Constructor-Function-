@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+</head>
+
+<body>
+    <h1>This is Online Bookstore</h1>
+</body>
+<script>
+    function CreateAuther(name, birthYear, nationality) {
+        this.name = name
+        this.birthYear = birthYear
+        this.nationality = nationality
+    }
+
+    function CreateBook(title, author, genre, price) {
+        this.title = title
+        this.author = author
+        this.genre = genre
+        this.price = price
+
+       this.getBookInfo = function getBookInfo(){
+        console.log( this.title,this.author.name,this.genre, this.price)
+    }
+    }
+    
+    let author1 = new CreateAuther('pravin',2003,'india')
+    let book1 = new CreateBook('the success of word',author1,'Self-help',299)
+
+    let author2 = new CreateAuther('deshraj',2007,'indian')
+    let book2 = new CreateBook('the since of king',author2,'Biography & memoir',199)
+
+    let author3 = new CreateAuther('babulal',1972,'indian')
+    let book3 = new CreateBook('the rules of best Wellness & health',author3,'Wellness & health',499)
+  
+    let allbook = []
+    allbook.push(book1,book2,book3)
+    function allbookinfo(){
+        console.log(allbook)
+    }
+    book1.getBookInfo()
+    book2.getBookInfo()
+    book3.getBookInfo()
+
+    allbookinfo()
+</script>
+
+</html>
