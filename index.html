@@ -63,26 +63,19 @@
 
     bankAccounts.push(acc1, acc2, acc3)
 
-    acc1.chackbalance()
-    
-    console.log(acc1.withdraw(500))
-    acc1.chackbalance()
-    console.log(acc1.deposit(10000));
-    acc1.chackbalance()
-    console.log(acc1.withdraw(650))
-    acc1.chackbalance()
-    console.log(acc1.withdraw(90000))
-    acc1.chackbalance()
-    // acc2.deposit(1000)
-    // acc2.withdraw(300)
+     acc2.deposit(1000)
+    acc1.withdraw(500)
 
-    // acc3.deposit(1000)
-    // acc3.withdraw(200)
+    acc2.deposit(1000)
+    acc2.withdraw(300)
 
-    // acc1.chackbalance()
-    // acc2.chackbalance()
-    // acc3.chackbalance()
-    // acc4.chackbalance()
+    acc3.deposit(1000)
+    acc3.withdraw(200)
+
+    acc1.chackbalance()
+    acc2.chackbalance()
+    acc3.chackbalance()
+    acc4.chackbalance()
 
     function gettotelbalence(){
         let totelbal = 0;
@@ -91,7 +84,7 @@
      }
      console.log(`totel balance = ${totelbal}`)
     }
-    // gettotelbalence()
+    gettotelbalence()
 </script>
 
 </html>
